@@ -1,7 +1,7 @@
 {
     "env": "prod",
-    "gcs_bucket": "airflow-projetcs-gds-dev",
-    "bq_project": "dev-sunset-468907-e9",
+    "gcs_bucket": "airflow-project-gds-dev11",
+    "bq_project": "project-f6c925e6-c3bf-44a1-a0f",
     "bq_dataset": "flight_data_prod",
     "tables": {
       "transformed_table": "transformed_flight_data_prod",
