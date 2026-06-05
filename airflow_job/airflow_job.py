@@ -64,7 +64,17 @@ with DAG(
             ]
         },
         "runtime_config": {
-            "version": "2.2", 
+            "version": "2.2",
+            "resource_config": {
+                "driver_resources": {
+                    "cpu_cores": 2,
+                    "memory_gb": 4,
+                },
+                "executor_resources": {
+                    "cpu_cores": 2,
+                    "memory_gb": 4,
+                },
+            },
         },
         "environment_config": {
             "execution_config": {
