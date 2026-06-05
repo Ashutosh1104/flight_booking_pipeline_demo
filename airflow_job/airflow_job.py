@@ -65,16 +65,15 @@ with DAG(
         },
         "runtime_config": {
             "version": "2.2",
-            "resource_config": {
-                "driver_resources": {
-                    "cpu_cores": 2,
-                    "memory_gb": 4,
-                },
-                "executor_resources": {
-                    "cpu_cores": 2,
-                    "memory_gb": 4,
-                },
-            },
+            "properties": {
+                # Driver config
+                "spark.driver.cores": "2",
+                "spark.driver.memory": "4g",
+                # Executor config
+                "spark.executor.cores": "2",
+                "spark.executor.memory": "4g",
+                "spark.executor.instances": "2",
+            }
         },
         "environment_config": {
             "execution_config": {
