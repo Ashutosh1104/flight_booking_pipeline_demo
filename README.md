@@ -38,6 +38,23 @@ The DAG reads environment settings from Airflow Variables:
 3. Set the required Airflow Variables for your environment and BigQuery targets.
 4. Trigger the DAG manually or configure a schedule.
 
+## Run status
+
+- Airflow variables were pushed successfully.
+- DAG was created successfully.
+- Task ran successfully.
+- Data loaded into the `dev` BigQuery dataset.
+
+## Screenshots
+
+![Airflow variables created](run_srcreenshots/airflow_variables_created.png)
+
+![DAG created](run_srcreenshots/dag_created.png)
+
+![Airflow run](run_srcreenshots/airflow_run.png)
+
+![BigQuery data available](run_srcreenshots/big_query_data_avilable.png)
+
 ## Notes
 
 - The batch is configured for Dataproc Serverless version `2.2`.
