@@ -63,22 +63,19 @@ with DAG(
                 f"--origin_insights_table={origin_insights_table}",
             ]
         },
-        "runtime_config": {
-            "version": "2.2",
-            "properties": {
-                # Driver config
-                "spark.driver.cores": "4",
-                "spark.driver.memory": "4g",
-                # Executor config
-                "spark.executor.cores": "4",
-                "spark.executor.memory": "4g",
-                "spark.executor.instances": "2",
-            }
-        },
+    "runtime_config": {
+        "version": "2.2",
+        "properties": {
+            "spark.driver.cores": "2",
+            "spark.driver.memory": "4g",
+            "spark.executor.cores": "2",
+            "spark.executor.memory": "4g",
+            "spark.executor.instances": "2",
+        }
+    },
         "environment_config": {
             "execution_config": {
                 "service_account": "875805264644-compute@developer.gserviceaccount.com",
-                "network_uri": f"projects/{bq_project}/global/networks/default",
                 "subnetwork_uri": f"projects/{bq_project}/regions/us-central1/subnetworks/default",
             }
         },
