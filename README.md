@@ -38,6 +38,8 @@ The DAG reads environment settings from Airflow Variables:
 3. Set the required Airflow Variables for your environment and BigQuery targets.
 4. Trigger the DAG manually or configure a schedule.
 
+
+
 ## Run status
 
 - Airflow variables were pushed successfully.
@@ -83,7 +85,10 @@ The output tables are present and data is available in the `dev` BigQuery datase
 
 ## Notes
 
-- The batch is configured for Dataproc Serverless version `2.2`.
-- The Spark job writes data to BigQuery using the BigQuery connector.
-- Adjust CPU and memory settings in `airflow_job.py` if you need to match your GCP quota.
+>The batch is configured for Dataproc Serverless version `2.2`.
+> The Spark job writes data to BigQuery using the BigQuery connector.
+> Adjust CPU and memory settings in `airflow_job.py` if you need to match your GCP quota.
 
+> Google Cloud Composer has been deleted for this demo, so the pipeline will not run in the current environment until Composer is reconfigured.
+> Composer is expensive to keep running, so please configure it as needed for your next execution.
+> In the future, this pipeline will be made dynamic to accept GCP details as variables.
