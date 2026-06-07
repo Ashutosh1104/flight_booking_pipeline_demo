@@ -38,6 +38,49 @@ The DAG reads environment settings from Airflow Variables:
 3. Set the required Airflow Variables for your environment and BigQuery targets.
 4. Trigger the DAG manually or configure a schedule.
 
+## Run status
+
+- Airflow variables were pushed successfully.
+- DAG was created successfully.
+- Task ran successfully.
+- Data loaded into the `dev` BigQuery dataset.
+
+## Screenshots
+
+<div style="border:1px solid #ddd; padding:16px; border-radius:8px; background:#fafafa;">
+
+**Airflow variables created**
+
+The required Airflow Variables were successfully pushed for the `dev` environment.
+
+![Airflow variables created](run_srcreenshots/airflow_variables_created.png)
+
+---
+
+**DAG created**
+
+The `flight_booking_dataproc_bq_dag` is deployed and visible in the Airflow UI.
+
+![DAG created](run_srcreenshots/dag_created.png)
+
+---
+
+**Airflow run**
+
+The DAG run completed successfully and the Spark job execution is visible in Airflow.
+
+![Airflow run](run_srcreenshots/airflow_run.png)
+
+---
+
+**BigQuery data available**
+
+The output tables are present and data is available in the `dev` BigQuery dataset.
+
+![BigQuery data available](run_srcreenshots/big_query_data_avilable.png)
+
+</div>
+
 ## Notes
 
 - The batch is configured for Dataproc Serverless version `2.2`.
